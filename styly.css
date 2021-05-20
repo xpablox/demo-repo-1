@@ -1,0 +1,251 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* základní nastvení, aplikuje se na všechny položky */
+}
+
+.cc{ /* čtverce - test plovoucího zarovnání */
+	width: 100px;
+	height: 100px;
+	background-color: #f96942;
+	float:left;
+}
+
+.zz{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	float: left;
+}
+
+.clearfix:after{ /* ukončení plovoucí vlastnosti */
+	content: "";
+	display:table;
+	clear: both;
+}
+
+.mm{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	
+}
+
+.container{
+	width:1200px;
+	margin: 0 auto;
+	background-color:  #f2f2f2;
+	padding-top:40px;
+	position: relative;
+}
+
+h1{
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	color: red;
+	font-size: 40px;
+	background: rgba(123,65, 134, 0.2); /* průhlednost */
+	text-align: center;
+	border: 2px solid blue;
+	padding: 10px 10px 10px 10px; /* vnitřní okraj, nahoře, vpravo, dole, vlevo */
+	margin: 40px 100px 20px 100px; /* vnější okraj */
+}
+h2{
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	color: #F5BB32; /* rgb(123,90,200) */
+	background: #2bc111;
+	text-shadow: 2px 2px 2px blue;
+	text-align: center;
+	margin: 20px 200px 20px 200px; /* vnější okraj */
+	padding: 10px;
+	border: 1px solid brown;
+}
+h3{
+	position: fixed; /* drží fixní pozici */
+	top: 0px;
+	left: 0px;
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-align: center;
+	border: 2px solid black;
+	width: 600px;
+	margin: 20px;
+	padding: 20px 20px;
+	box-sizing: border-box; /* šířka i výška je vždy stejná jako nastavená */
+	border-radius: 10px;
+}
+
+.date{ /* změna pozice - relativní */
+	text-align: right;
+	background: orange;
+	font-family: Verdana, Arial, sans-serif; 
+	position: relative; /* zarovnává se vůči výchozí pozici */
+	top: -70px; /* posunutí, nebo bottom 40px, left, right */
+	margin-right: 100px;
+	margin-left: 800px;
+}
+
+
+.date2{ /* změna pozice - absolutní */
+	text-align: right;
+	background: orange;
+	font-family: Verdana, Arial, sans-serif; 
+	position: absolute; /* zarovnává se od nadřazeného relative bodu nebo od body */
+	top: 0px;
+	
+}
+
+p{
+	font-weight: normal; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-align: justify; /* zarovnání do bloku */
+	padding-bottom: 10px;
+	padding: 8px;
+}
+
+.zarovnani{ /* div - používá se na obalování blokových elementů */
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-align: center;
+	border: 2px solid blue; /* tlošťka rámečku - dotted, double, dashed, typ, barva*/
+	padding: 8px; /*všude stejné okraje*/
+	margin: 20px 20px 20px 600px;
+}
+
+.pismena{ /* span - obalování řádkových elementů */
+	color:red;
+	text-transform: uppercase;
+}
+
+.prvni{
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-align: justify; /* zarovnání do bloku */
+	border: 10px solid blue; /* tlošťka rámečku - dotted, double, dashed, typ, barva*/
+	padding: 10px 20px 10px 10px; /* jedno číslo = všude stejné okraje*/
+	margin: 20px 40px;
+	}
+.druhy{
+	font-weight:normal; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	border: 2px solid red; /* tlošťka rámečku - dotted, double, dashed, typ, barva*/
+	padding: 8px 20px; /*nahoře-dole, vpravo-vlevo*/
+	margin: auto 30px;
+}
+
+ul{
+	text-align:center;
+	margin: 40px auto;
+	border: 2px solid blue;
+	width: 600px;
+	padding: 10px 30px;
+}
+
+ol{
+	text-align:center;
+	margin: 40px auto;
+	border: 2px solid blue;
+	width: 600px;
+	padding: 10px 30px;
+}
+
+img{
+	width: 200px;
+	float:left;
+	margin: 10px 20px 10px 10px;
+}
+
+
+.button{
+	display:block; /* přepnutí z řádkováho na blokový element; 
+	jiná možnost: inline-block - vytvoří řádek menu; inline - nemá výšku a šířku, pouze
+	okraje po stranách; none - nezobrazuje se */
+	font-weight:bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-decoration: none; /* none odstanění podtržení z odkazu; underline,
+	line-through, overline, underline  */
+	text-align: center;
+	text-shadow: 1px 1px 2px brown;
+	background: orange;
+	color: white;
+	margin: 40px 400px;
+	
+	
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 2px 2px 3px brown;
+}
+
+a{
+	font-weight:bold; 
+	font-family: Verdana, Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	background: orange;
+	padding: 0px 3px 2px 3px;
+	border-radius: 4px;
+}
+
+a:hover{
+	color: red;
+	background: white;
+	border: 1px solid red;
+	
+}
+
+iframe{
+	margin: 10px 100px;
+	display:block;
+}
+
+.nastred{ /* obrázek */
+	width: 450px;
+	border-radius: 50px 0px 50px 0px;
+	box-shadow: 10px 5px 7px grey; /* sín - posun doprava, dolů, rozostření, barva*/
+	margin: 10px 200px;
+	float: none;
+	
+	
+}
+
+hr{ /* vodorovná linka */
+	margin: 20px 100px 20px 100px;
+}
+
+form{
+	margin-left: 100px;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+input{
+	font-family: Verdana, Arial, sans-serif;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+input[type="submit"]{
+	padding: 3px;
+}
+
+select{
+	font-family: Verdana, Arial, sans-serif;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+input[type="radio"]{
+	margin-bottom: 10px;
+}
+
+
+#autor{
+	font-weight: bold; /* normal; bold; nebo od 100 do 900, normal je 400 */
+	font-family: Verdana, Arial, sans-serif; /* "Times New Roman", Helvetica, serif */
+	text-align: center;
+	color: green;
+	/* id se odkazuje na stránce pouze jednou */
+	margin: 40px;
+}
+
